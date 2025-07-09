@@ -1,72 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
+  <title>Student Attendance Check</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!--
-      This is the page head - it contains info the browser uses
-      Like the title, which appears on the browser tab but not inside the page
-      Further down you'll see the content that displays in the page
-    -->
-    <title>Hello World!</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-    <!-- The website stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
-    <!-- The website JavaScript file -->
-    <script src="/script.js" defer></script>
+  <!-- Sweet Alert -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Loading Overlay -->
+  <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai');
+
+  * {
+    box-sizing: border-box;
+    font-family: 'Noto Sans Thai', sans-serif;
+  }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      background: rgb(252, 233, 233);
+      background: linear-gradient(0deg, rgba(252, 233, 233, 1) 0%, rgba(224, 244, 241, 1) 26%, rgba(255, 255, 255, 1) 71%);
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      flex-direction: column;
+    }
+  
+    .list {
+      background-color: #ffffff;
+      padding: 1.8em 1.2em;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 0.6em;
+    }
+  
+    footer {
+      margin-top: 10px;
+      background-color: #000;
+      width: 100%;
+      padding: 2px;
+      position: fixed;
+      bottom: 0;
+    }
+  
+    footer p,
+    footer a {
+      text-decoration: none;
+      margin: 0;
+    }
+  
+    footer .fa {
+      color: #fff740;
+    }
+    .responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+  </style>
   </head>
-  <body>
-    <!--
-      The body includes the content you see in the page
-      Each element is defined using tags, like this <div></div>
-      The attributes like class="wrapper" let us style elements in the CSS
-    -->
-    <div class="wrapper">
-      <div class="content" role="main">
-        <h1 class="title">Hello World!</h1>
-        <img
-          src="https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2Fillustration.svg?v=1618177344016"
-          class="illustration"
-          alt="Editor illustration"
-          title="Click the image!"
-        />
-        <div class="instructions">
-          <h2>Using this project</h2>
-          <p>
-            This is the Glitch <strong>Hello Website</strong> project. You can
-            use it to build your own site. Check out the code in the editor and open
-            the <span class="fileopener" data-file="TODO.md" data-line="0"
-              >TODO</span> for next steps!
-          </p>
-          <!--  🚧 TODO: ADD BUTTON HERE -->
+<body>
+  <center class="mb-4" >
+<img src="https://lh3.googleusercontent.com/d/1Wl0X4vTKSrZ41UWo7V9-1xYs7V_HYSmZ" class="mt-4" style="width:200px; height:auto; padding-bottom: 10px; ">  
+<h2>Student Attendance Apps</h2>                  
+<h5 class="text-center text-danger">ระบบจองห้อง</h5>   
+</center>
 
-          <!-- Once you've added the button from TODO.md, click it in the page -->
-          <!-- Check out the function in script.js to see how it works -->
-        </div>
-      </div>
+    <main class="container">
+  <div class="container list">
+    <div class="d-flex justify-content-center mb-3">
+      
     </div>
-    <!-- The footer holds our remix button — you can keep or delete it ✂ -->
-    <footer class="footer">
-      <div class="links"></div>
-      <a
-        class="btn--remix"
-        target="_top"
-        href="https://glitch.com/edit/#!/remix/glitch-hello-website"
-      >
-        <img
-          src="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2FLogo_Color.svg?v=1618199565140"
-          alt=""
-        />
-        Remix on Glitch
-      </a>
-    </footer>
-  </body>
+    <form id="attendance-form" class="mt-4">
+      <div class="row mb-3">
+        <label class="text-center">กรุณาเลือกห้องที่ต้องการจอง</label>
+      </div> 
+    
+    <center><a href="meeting.html" class="btn btn-primary">ห้องประชุมโรงเรียน</a></center><br>
+    
+    <center><a href="ecroom.html" class="btn btn-primary">ห้อง EC ประถม</a></center>
+    
+    </form>
+  
+  
+  </div>
+  </main>
+
+ 
+
+  <script>
+   
+  </script>
+  
+<footer class="text-center text-lg-start bg-light text-muted" style="  position: static;left: 0;bottom: 0;width: 100%;">
+<div class="footer-container"></div>
+</footer>
+  
+
+</body>
 </html>
